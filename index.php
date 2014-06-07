@@ -5,14 +5,14 @@ require ('conection.php');
 session_start();
 $smarty = new Smarty();
 if (isset($_SESSION['user'])){
-	/*
-	hacer cosas de index
-	*/
 	$database = Database::getInstance();
 	$boxes = $database->allBox($_SESSION['user']);
 	$smarty->assign('boxes', $boxes);
+	$smarty->assign('flag', 1);
+	$smarty->assign('number', 0);
 	$smarty->assign('user', $_SESSION['user']);
 	$smarty->display("welcome.tpl");
+}
 }
 else
 {

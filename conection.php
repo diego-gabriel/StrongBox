@@ -55,6 +55,18 @@ class Database{
 		return $boxes;
 	}
 
+	public function isUserBoxes($username, $id){
+		$query = "SELECT `id` FROM `BOX` WHERE `id` = '$id' AND `account` = '$username'";
+		$result = mysqli_query($this->connection, $query);
+		return mysqli_num_rows($result) > 0;
+	}
+
+	public function getFields($id){
+		$query = "SELECT `title`, `url`, `password`, `username` FROM `BOX` WHERE `id` = '$id'";
+		$result = mysqli_query($this->connection, $query);
+		return mysqli_fetch_assoc($result);
+	}
+
 	public function createExtra($id, $title, $value){
 		$query = "INSERT INTO EXTRA (box_id, title, value) VALUES ('$id', '$title', '$value')";
 		echo $query;
