@@ -25,6 +25,6 @@
 		<br>
 	</form>
 		<button onclick = "enableModify()" id = "modifyButton">Modificar</button>
-{include file = "showExtras.tpl"}
+{include file="showExtras.tpl"}
 </body>
 </html>

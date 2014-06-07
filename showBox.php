@@ -8,12 +8,14 @@ require ('conection.php');
 		$database = Database::getInstance();
 		if($database->isUserBoxes($_SESSION['user'], $id)){
 			$fields = $database->getFields($id);
+			$extras = $database->getExtras($id);
 			$title = $fields['title'];
 			$url =  $fields['url'];
 			$password = $fields['password'];
 			$username = $fields['username'];
 			
 			$smarty = new Smarty();
+			$smarty->assign('extras', $extras);
 			$smarty->assign('title', $title);
 			$smarty->assign('url', $url);
 			$smarty->assign('password', $password);
