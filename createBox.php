@@ -23,6 +23,8 @@ if (isset($_POST['username'])){
 		$i++;
 	}
 
+	header("location: index.php");
+
 }
 else{
 	$smarty = new Smarty();

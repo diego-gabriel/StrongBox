@@ -10,10 +10,10 @@ function newExtra(){
 	var eraseButton = document.createElement('button');
 
 	id++;
-	setLabelAttr(titleLabel, "Titulo");
-	setInputAttr(titleinput);
-	setLabelAttr(valueLabel, "Valor");
-	setInputAttr(valueinput);
+	setLabelAttr(titleLabel, "Titulo", "title");
+	setInputAttr(titleinput, "title");
+	setLabelAttr(valueLabel, "Valor", "value");
+	setInputAttr(valueinput, "value");
 
 	eraseButton.onclick = function(){
 		form.removeChild(extraDiv);
@@ -39,21 +39,21 @@ function newExtra(){
 function updateIndex(div){
 	label = div.getElementsByTagName('label');
 	input = div.getElementsByTagName('input');
-	for (var i = 0; i < 2; i++){
-		setLabelAttr(label[i]);
-		setInputAttr(input[i]);
-	}
+	setLabelAttr(label[i], "Titulo", "title");
+	setInputAttr(input[i], "title");
+	setLabelAttr(label[i], "Valor", "value");
+	setInputAttr(input[i], "value");
 }
 
-function setLabelAttr(label, title){
-	label.for = "title-"+id;
+function setLabelAttr(label, title, name){
+	label.for = name+"-"+id;
 	label.innerHTML = title+" "+id+":";
 }
 
-function setInputAttr(input){
-	input.id = "title-"+id;
+function setInputAttr(input, name){
+	input.id = name+"-"+id;
 	input.type = "text";
-	input.name = "title-"+id;
+	input.name = name+"-"+id;
 	input.required = true;
 }
 

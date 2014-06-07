@@ -13,7 +13,6 @@ if (isset($_SESSION['user'])){
 	$smarty->assign('user', $_SESSION['user']);
 	$smarty->display("welcome.tpl");
 }
-}
 else
 {
 	$message = "";
