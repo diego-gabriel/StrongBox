@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>StrongBox - Ver Box!</title>
-<script type="text/javascript" src = "./smarty/templates/showBox.js"></script>
+<script type="text/javascript" src = "./scripts/showBox.js"></script>
 </head>
 <body>
 	<label>Titulo:</label>
