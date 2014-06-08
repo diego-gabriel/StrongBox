@@ -69,8 +69,17 @@ class Database{
 
 	public function createExtra($id, $title, $value){
 		$query = "INSERT INTO EXTRA (box_id, title, value) VALUES ('$id', '$title', '$value')";
-		echo $query;
 		mysqli_query($this->connection, $query);
+	}
+
+	public function getExtras($id){
+		$query = "SELECT `title`, `value` FROM `EXTRA` WHERE `box_id` = '$id'";
+		$result = mysqli_query($this->connection, $query);
+		$extras = array();
+		while ($extra = mysqli_fetch_assoc($result)){
+			$extras[] = $extra;
+		}
+		return $extras;
 	}
 }
 ?>
