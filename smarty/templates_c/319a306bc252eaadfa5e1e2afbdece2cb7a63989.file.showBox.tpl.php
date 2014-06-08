@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2014-06-07 23:04:49
+<?php /* Smarty version Smarty-3.1.18, created on 2014-06-08 04:39:06
          compiled from "smarty/templates/showBox.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4382901345393793f517a84-48798292%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '319a306bc252eaadfa5e1e2afbdece2cb7a63989' => 
     array (
       0 => 'smarty/templates/showBox.tpl',
-      1 => 1402174271,
+      1 => 1402178368,
       2 => 'file',
     ),
   ),
@@ -30,7 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <html>
 <head>
 <title>StrongBox - Ver Box!</title>
-<script type="text/javascript" src = "./smarty/templates/showBox.js"></script>
+<script type="text/javascript" src = "scripts/showBox.js"></script>
 <script type="text/javascript" src = "scripts/updateBox.js"></script>
 </head>
 <body>
