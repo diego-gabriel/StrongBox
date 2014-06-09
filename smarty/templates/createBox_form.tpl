@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h4>Nuevo BOX</h4>
-	<form action = "createBox.php" method = "POST" id = "boxCreationForm">
+	<form action = "createBox.php" method = "POST" id = "boxForm">
 		<label for = "title">Titulo:</label>
 		<input type = "text" id = "title" name = "title">
 		<br>
@@ -19,8 +19,8 @@
 		<label for = "url">URL:</label>
 		<input type = "url" id = "url" name = "url">
 		<br>
+		<button onclick = "newExtra()" type = "button">Añadir elemento</button>
 		<input type = "submit">
 	</form>
-		<button onclick = "newExtra()">Añadir elemento</button>
 </body>
 </html>

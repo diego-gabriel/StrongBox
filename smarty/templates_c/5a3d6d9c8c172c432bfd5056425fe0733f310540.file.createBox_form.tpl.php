@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2014-06-06 22:31:31
+<?php /* Smarty version Smarty-3.1.18, created on 2014-06-09 03:49:32
          compiled from "smarty/templates/createBox_form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:295451217538fd6627b5355-60302315%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5a3d6d9c8c172c432bfd5056425fe0733f310540' => 
     array (
       0 => 'smarty/templates/createBox_form.tpl',
-      1 => 1402086411,
+      1 => 1402278324,
       2 => 'file',
     ),
   ),
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 <body>
 	<h4>Nuevo BOX</h4>
-	<form action = "createBox.php" method = "POST" id = "boxCreationForm">
+	<form action = "createBox.php" method = "POST" id = "boxForm">
 		<label for = "title">Titulo:</label>
 		<input type = "text" id = "title" name = "title">
 		<br>
@@ -40,8 +40,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<label for = "url">URL:</label>
 		<input type = "url" id = "url" name = "url">
 		<br>
+		<button onclick = "newExtra()" type = "button">Añadir elemento</button>
 		<input type = "submit">
 	</form>
-		<button onclick = "newExtra()">Añadir elemento</button>
 </body>
 </html><?php }} ?>

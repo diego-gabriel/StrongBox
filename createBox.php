@@ -18,7 +18,6 @@ if (isset($_POST['username'])){
 
 	$i = 1;
 	while (isset($_POST["title-$i"])){
-		echo "id = $i";
 		$database->createExtra($boxId, $_POST["title-$i"], $_POST["value-$i"]);
 		$i++;
 	}

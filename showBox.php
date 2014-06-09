@@ -20,6 +20,7 @@ require ('conection.php');
 			$smarty->assign('url', $url);
 			$smarty->assign('password', $password);
 			$smarty->assign('username', $username);
+			$smarty->assign('box_id', $_GET['id']);
 			$smarty->display("showBox.tpl");
 		}
 		else

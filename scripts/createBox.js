@@ -1,6 +1,6 @@
 var id = 0;
 function newExtra(){
-	var form = document.getElementById("boxCreationForm");
+	var form = document.getElementById("boxForm");
 	var formChildren = form.childNodes;
 	var titleLabel = document.createElement('label');
 	var valueLabel = document.createElement('label');
@@ -24,29 +24,29 @@ function newExtra(){
 			updateIndex(divChildren[i]);
 		}
 	}
+	eraseButton.type = "button";
+	eraseButton.innerHTML = "Eliminar";
 
-	eraseButton.innerHTML = "eliminar";
-
-	var array = new Array(titleLabel, titleinput, endl(), valueLabel, valueinput, endl(), eraseButton, endl());
+	var array = new Array(titleLabel, titleinput, endl(), valueLabel, valueinput, eraseButton, endl());
 
 	for (var i = 0; i < array.length; i++)
 		extraDiv.appendChild(array[i]);
 
-	form.insertBefore(extraDiv, formChildren[formChildren.length-2]);
+	form.insertBefore(extraDiv, formChildren[formChildren.length-4]);
 
 }
 
 function updateIndex(div){
 	label = div.getElementsByTagName('label');
 	input = div.getElementsByTagName('input');
-	setLabelAttr(label[i], "Titulo", "title");
-	setInputAttr(input[i], "title");
-	setLabelAttr(label[i], "Valor", "value");
-	setInputAttr(input[i], "value");
+	setLabelAttr(label[0], "Titulo", "title");
+	setInputAttr(input[0], "title");
+	setLabelAttr(label[1], "Valor", "value");
+	setInputAttr(input[1], "value");
 }
 
 function setLabelAttr(label, title, name){
-	label.for = name+"-"+id;
+	label.htmlFor = name+"-"+id;
 	label.innerHTML = title+" "+id+":";
 }
 

@@ -81,5 +81,16 @@ class Database{
 		}
 		return $extras;
 	}
+
+	public function deleteAllExtras($box_id){
+		$query = "DELETE FROM EXTRA WHERE box_id = '$box_id'";
+		mysqli_query($this->connection, $query);
+	}
+
+	public function deleteBox($box_id, $account){
+		$this->deleteAllExtras($box_id);
+		$query = "DELETE FROM BOX WHERE id = '$box_id' AND account = '$account'";
+		mysqli_query($this->connection, $query);
+	}
 }
 ?>
