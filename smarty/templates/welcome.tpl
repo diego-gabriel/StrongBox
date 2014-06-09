@@ -8,6 +8,5 @@
 {include file="boxList.tpl"}
 <a href="closeSession.php">Cerrar Sesion</a>
 <a href="createBox.php">Crear Box</a>
-<a href="deleteBox.php">Eliminar Box</a>
 </body>
 </html>

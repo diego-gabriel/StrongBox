@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2014-06-09 03:46:14
+<?php /* Smarty version Smarty-3.1.18, created on 2014-06-09 04:09:18
          compiled from "smarty/templates/showBox.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4382901345393793f517a84-48798292%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '319a306bc252eaadfa5e1e2afbdece2cb7a63989' => 
     array (
       0 => 'smarty/templates/showBox.tpl',
-      1 => 1402278372,
+      1 => 1402279757,
       2 => 'file',
     ),
   ),
@@ -65,6 +65,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<button onclick = "enableModify()" id = "modifyButton" type = "button">Modificar</button>
 	<button><a href="deleteBox.php?id=<?php echo $_smarty_tpl->tpl_vars['box_id']->value;?>
 ">Eliminar Box</a></button>
-
+	<br>
+	<br>
+	<a href="index.php">Volver a Inicio</a>
 </body>
 </html><?php }} ?>

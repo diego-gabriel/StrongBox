@@ -29,6 +29,8 @@
 	</form>
 	<button onclick = "enableModify()" id = "modifyButton" type = "button">Modificar</button>
 	<button><a href="deleteBox.php?id={$box_id}">Eliminar Box</a></button>
-
+	<br>
+	<br>
+	<a href="index.php">Volver a Inicio</a>
 </body>
 </html>

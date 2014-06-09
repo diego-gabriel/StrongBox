@@ -22,5 +22,7 @@
 		<button onclick = "newExtra()" type = "button">Añadir elemento</button>
 		<input type = "submit">
 	</form>
+
+	<a href="index.php">Volver a inicio</a>
 </body>
 </html>

@@ -8,6 +8,7 @@ if (isset($_POST['username']) && $_POST['password']){
 
 	if (!$database->existUser($username)){
 		$database->createUser($username, md5($password));
+		header('location: index.php');
 	}
 	else{
 		header("location: register.php?freeuser=false");
